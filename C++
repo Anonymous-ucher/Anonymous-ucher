@@ -1,0 +1,41 @@
+#include <iostream>
+#include <cmath>
+
+const double PI = 3.14159265358979323846;
+
+// Function to calculate the area of a square
+double calculateSquareArea(double side) {
+    return side * side;
+}
+
+// Function to calculate the area of a rectangle
+double calculateRectangleArea(double length, double width) {
+    return length * width;
+}
+
+// Function to calculate the area of a circle
+double calculateCircleArea(double radius) {
+    return PI * radius * radius;
+}
+
+int main() {
+    // Example usage
+    double side, length, width, radius;
+
+    // Get user input
+    std::cout << "Enter the side length of the square: ";
+    std::cin >> side;
+
+    std::cout << "Enter the length and width of the rectangle: ";
+    std::cin >> length >> width;
+
+    std::cout << "Enter the radius of the circle: ";
+    std::cin >> radius;
+
+    // Calculate and display areas
+    std::cout << "Area of the square: " << calculateSquareArea(side) << std::endl;
+    std::cout << "Area of the rectangle: " << calculateRectangleArea(length, width) << std::endl;
+    std::cout << "Area of the circle: " << calculateCircleArea(radius) << std::endl;
+
+    return 0;
+}
